@@ -83,12 +83,12 @@ body {
 	line-height: $header-height;
 }
 
-.panel {
+.panel_introduction {
 	position: absolute;
 	top: 0;
 	height: 100vh;
 	width: 100%;
-	background-color: red;
+	background-color: #f47142;
 	z-index: -1;
 }
 
@@ -101,4 +101,11 @@ body {
 	width: 10em;
 	animation: type 4s steps(60, end);
 	border-right: 0.1px solid black;
+}
+
+.panel_interests {
+	position: absolute;
+	top: 100vh;
+	height: 100vh;
+	width: 100%;
 }
