@@ -50,6 +50,21 @@ $on-laptop:        800px !default;
 */
 $header-height: 3em;
 
+@-webkit-keyframes appear {
+	from {
+		color: red;
+	}
+	to {
+		color: yellow;
+	}
+}
+
+@-webkit-keyframes type {
+	from {
+		width: 0;
+	}
+}
+
 body {
 	margin: 0;
 }
@@ -60,9 +75,30 @@ body {
 	height: $header-height;
 	background-color: black;
 	color: white;
+	z-index: 1;
 }
 
 .header_content {
 	width: 100px;
 	line-height: $header-height;
+}
+
+.panel {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: red;
+	z-index: -1;
+}
+
+.introduction {
+	position: absolute;
+	top: 30vh;
+	left: 40vw;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 10em;
+	animation: type 4s steps(60, end);
+	border-right: 0.1px solid black;
 }
