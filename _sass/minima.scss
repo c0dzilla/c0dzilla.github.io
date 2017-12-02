@@ -48,7 +48,9 @@ $on-laptop:        800px !default;
   "minima/syntax-highlighting"
 ;
 */
-$header-height: 3em;
+$header-height: 4em;
+$paragraph-bg: rgba(91, 91, 80, 0.5);
+$paragraph-color: white;
 
 @-webkit-keyframes appear {
 	from {
@@ -70,11 +72,13 @@ body {
 }
 
 .header {
+	position: fixed;
+	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	height: $header-height;
-	background-color: black;
-	color: white;
+	background-color: rgba(242, 220, 111, 0.5);
+	color: black;
 	z-index: 1;
 }
 
@@ -88,18 +92,18 @@ body {
 	top: 0;
 	height: 100vh;
 	width: 100%;
-	background-color: #f47142;
+	background-color: rgb(221, 31, 31);
 	z-index: -1;
 }
 
 .introduction {
 	position: absolute;
 	top: 30vh;
-	left: 40vw;
+	left: 30%;
 	overflow: hidden;
 	white-space: nowrap;
 	width: 10em;
-	animation: type 4s steps(60, end);
+	animation: type 4s steps(30, end);
 	border-right: 0.1px solid black;
 }
 
@@ -108,4 +112,18 @@ body {
 	top: 100vh;
 	height: 100vh;
 	width: 100%;
+}
+
+.content {
+	background-color: $paragraph-bg;
+	color: $paragraph-color;
+	border-radius: 5px; 
+}
+
+.introduction_content {
+	position: absolute;
+	top: 40vh;
+	left: 30%;
+	width: 40%;
+	text-align: center;	
 }
