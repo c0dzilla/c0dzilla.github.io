@@ -52,14 +52,6 @@ $header-height: 4em;
 $content-bg: rgba(91, 91, 80, 0.5);
 $content-color: white;
 
-@-webkit-keyframes appear {
-	from {
-		display: none;
-	}
-	to {
-		display: block;
-	}
-}
 
 @-webkit-keyframes type {
 	from {
@@ -106,7 +98,7 @@ body {
 }
 
 .introduction {
-	position: fixed;
+	position: absolute;
 	top: 20vh;
 	left: 10%;
 	overflow: hidden;
@@ -129,21 +121,25 @@ body {
 	background-color: $content-bg;
 	color: $content-color;
 	border-radius: 5px;
-	padding: 2em;
+	text-align: center;
+	vertical-align: center;
 }
 
-.introduction_bio {
+#introduction_bio {
 	position: absolute;
 	left: 10%;
-	top: 60vh;
-	animation: appear 0.5s;
-	animation-delay: 4s;
+	top: 45vh;
+	display: none;
+	background-color: rgb(221, 86, 37);
+	font-family: 'Passion One', cursive;
+	font-size: 2em;
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
-.introduction_content {
+#introduction_content {
 	position: absolute;
 	top: 40vh;
 	left: 30%;
 	width: 40%;
-	text-align: center;	
 }
