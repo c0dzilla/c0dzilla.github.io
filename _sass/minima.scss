@@ -49,15 +49,15 @@ $on-laptop:        800px !default;
 ;
 */
 $header-height: 4em;
-$paragraph-bg: rgba(91, 91, 80, 0.5);
-$paragraph-color: white;
+$content-bg: rgba(91, 91, 80, 0.5);
+$content-color: white;
 
 @-webkit-keyframes appear {
 	from {
-		color: red;
+		display: none;
 	}
 	to {
-		color: yellow;
+		display: block;
 	}
 }
 
@@ -77,14 +77,21 @@ body {
 	display: flex;
 	justify-content: flex-end;
 	height: $header-height;
-	background-color: rgba(242, 220, 111, 0.5);
-	color: black;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: rgb(239, 238, 232);
 	z-index: 1;
 }
 
 .header_content {
 	width: 100px;
 	line-height: $header-height;
+	text-align: center;
+}
+
+.header_content:hover {
+	color: yellow;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .panel_introduction {
@@ -92,19 +99,23 @@ body {
 	top: 0;
 	height: 100vh;
 	width: 100%;
-	background-color: rgb(221, 31, 31);
+	background-color: gray;
+	background-image: url("../images/introduction_image.png");
+	background-size: 100% 100%;
 	z-index: -1;
 }
 
 .introduction {
-	position: absolute;
-	top: 30vh;
-	left: 30%;
+	position: fixed;
+	top: 20vh;
+	left: 10%;
 	overflow: hidden;
 	white-space: nowrap;
-	width: 10em;
-	animation: type 4s steps(30, end);
-	border-right: 0.1px solid black;
+	font-family: 'Passion One', cursive;
+	font-size: 5em;
+	width: 9em;
+	animation: type 2s steps(40, end);
+	color: yellow;
 }
 
 .panel_interests {
@@ -115,9 +126,18 @@ body {
 }
 
 .content {
-	background-color: $paragraph-bg;
-	color: $paragraph-color;
-	border-radius: 5px; 
+	background-color: $content-bg;
+	color: $content-color;
+	border-radius: 5px;
+	padding: 2em;
+}
+
+.introduction_bio {
+	position: absolute;
+	left: 10%;
+	top: 60vh;
+	animation: appear 0.5s;
+	animation-delay: 4s;
 }
 
 .introduction_content {
