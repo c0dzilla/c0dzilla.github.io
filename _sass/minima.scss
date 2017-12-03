@@ -168,14 +168,14 @@ body {
 .panel_about {
 	position: absolute;
 	top: 100vh;
-	height: 80vh;
+	height: 100vh;
 	width: 100%;
 }
 
 #about_content {
 	z-index: 1;
 	position: absolute;
-	top: 5%;
+	top: 30%;
 	width: 40%;
 	left: 30%;
 	background-color: $content-bg;
@@ -187,7 +187,7 @@ body {
 .panel_interests {
 	position: absolute;
 	z-index: 1;
-	top: 180vh;
+	top: 200vh;
 	height: 100vh;
 	background-color: rgb(239, 238, 232);
 	background-color: rgba(221, 86, 37, 0.5);
