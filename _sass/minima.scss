@@ -53,6 +53,14 @@ $header-height: 4em;
 $content-bg: rgba(0, 0, 0, 0.7);
 $content-color: white;
 
+h1 {
+	margin: 0;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+}
 
 @-webkit-keyframes type {
 	from {
@@ -190,10 +198,6 @@ body {
 	text-align: center;
 	font-family: 'Spectral SC', serif;
 	padding: 1em;
-}
-
-h1 {
-	margin: 0;
 }
 
 #interests_heading {
