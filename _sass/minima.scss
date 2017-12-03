@@ -70,13 +70,14 @@ body {
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 10px;
-    background-color: gray;
+    background-color: rgb(211, 211, 211);
 }
  
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    background-color: rgb(211, 211, 211);
+    
+    background-color: gray;
 }
 
 .header {
@@ -87,13 +88,14 @@ body {
 	height: $header-height;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: rgb(239, 238, 232);
-	z-index: 1;
+	z-index: 2;
 }
 
 .header_content {
 	width: 100px;
 	line-height: $header-height;
 	text-align: center;
+	line-height: $header-height;
 }
 
 .header_content:hover {
@@ -102,8 +104,8 @@ body {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 
-.panel_introduction {
-	position: absolute;
+#introduction_image {
+	position: fixed;
 	top: 0;
 	height: 100vh;
 	width: 100%;
@@ -111,6 +113,14 @@ body {
 	background-image: url("../images/introduction_image.png");
 	background-size: 100% 100%;
 	z-index: -1;
+}
+
+.panel_introduction {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
 }
 
 .introduction {
@@ -126,19 +136,11 @@ body {
 	color: yellow;
 }
 
-.panel_interests {
-	position: absolute;
-	top: 100vh;
-	height: 100vh;
-	width: 100%;
-}
-
 .content {
 	background-color: $content-bg;
 	color: $content-color;
 	border-radius: 5px;
 	text-align: center;
-	vertical-align: center;
 }
 
 #introduction_bio {
@@ -153,9 +155,15 @@ body {
 	padding-left: 1em;
 }
 
-#introduction_content {
+.panel_about {
 	position: absolute;
-	bottom: 20vh;
-	left: 30%;
-	width: 40%;
+	top: 100vh;
+	height: 100vh;
+	width: 100%;
+}
+
+#about_content {
+	z-index: 1;
+	position: absolute;
+	top: 50vh;
 }
