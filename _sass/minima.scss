@@ -141,6 +141,7 @@ body {
 	color: $content-color;
 	border-radius: 5px;
 	text-align: center;
+	box-shadow: 0 0 5px gray;
 }
 
 #introduction_bio {
@@ -165,5 +166,8 @@ body {
 #about_content {
 	z-index: 1;
 	position: absolute;
-	top: 50vh;
+	top: 10vh;
+	width: 40%;
+	left: 30%;
+	color: white;
 }
