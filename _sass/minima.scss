@@ -57,6 +57,10 @@ h1 {
 	margin: 0;
 }
 
+p{
+	margin: 0;
+}
+
 a {
 	text-decoration: inherit;
 	color: inherit;
@@ -134,7 +138,7 @@ body {
 
 .introduction {
 	position: absolute;
-	top: 20%;
+	top: 25%;
 	left: 10%;
 	overflow: hidden;
 	white-space: nowrap;
@@ -153,12 +157,13 @@ body {
 	box-shadow: 0 0 5px gray;
 	padding-right: 1em;
 	padding-left: 1em;
+	padding: 1em 1em 1em 1em;
 }
 
 #introduction_bio {
 	position: absolute;
 	left: 10%;
-	top: 45%;
+	top: 40%;
 	display: none;
 	background-color: rgb(221, 86, 37);
 	font-family: 'Passion One', cursive;
