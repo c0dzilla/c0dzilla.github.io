@@ -51,6 +51,7 @@ $on-laptop:        800px !default;
 $header-height: 4em;
 $content-bg: rgba(0, 0, 0, 0.7);
 $content-color: white;
+$content-font-family: 'Barlow Semi Condensed', sans-serif; 
 
 h1 {
 	margin: 0;
@@ -139,13 +140,17 @@ body {
 	position: absolute;
 	top: 25%;
 	left: 10%;
-	overflow: hidden;
-	white-space: nowrap;
 	font-family: 'Passion One', cursive;
 	font-size: 5em;
 	width: 9em;
-	animation: type 2s steps(40, end);
 	color: yellow;
+	overflow: hidden;
+	white-space: nowrap;
+	animation: type 2s steps(40, end);
+}
+
+#introduction-text {
+	color: white;
 }
 
 .content {
@@ -157,6 +162,7 @@ body {
 	padding-right: 1em;
 	padding-left: 1em;
 	padding: 1em 1em 1em 1em;
+	font-family: $content-font-family;
 }
 
 #introduction_bio {
@@ -167,6 +173,11 @@ body {
 	//background-color: rgb(221, 86, 37);
 	font-family: 'Passion One', cursive;
 	font-size: 2em;
+}
+
+#icons-container {
+	position: absolute;
+	bottom: 20%;
 }
 
 .panel_about {
@@ -185,7 +196,6 @@ body {
 	background-color: $content-bg;
 	color: white;
 	font-size: 1.5em;
-	font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .panel_interests {
