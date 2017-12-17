@@ -178,6 +178,9 @@ body {
 #icons-container {
 	position: absolute;
 	bottom: 20%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .panel_about {
