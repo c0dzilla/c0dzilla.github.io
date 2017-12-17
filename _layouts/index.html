@@ -59,6 +59,7 @@
 	</div>
 
 	<div id = "icons-container">
+
 		{% if site.github_username %}
 		<a href = "https://www.github.com/{{ site.github_username }}">
 			<span class = "icons" id = "icon-github">
@@ -66,6 +67,15 @@
 			</span>
 		</a>
 		{% endif %}
+
+		{% if site.linkedin_username %}
+		<a href = "https://www.linkedin.com/in/{{ site.linkedin_username }}">
+			<span class = "icons" id = "icon-github">
+				{% include icon-linkedin_username %}
+			</span>
+		</a>
+		{% endif %}
+		
 	</div>
 
 </div>
