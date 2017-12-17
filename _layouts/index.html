@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Nikhil Kaushik
+	</title>
+	<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/main.css">
+</head>
+<body>
+
+<div class = "header">
+	
+	<a href="#about_link">
+		<div class = "header_content" id = "about_tag">
+			About		
+		</div>
+	</a>
+
+	<a href="#interests_link">
+		<div class = "header_content" id = "interests_tag">
+			Interests
+		</div>
+	</a>
+
+	<div class = "header_content" id = "contact_tag">
+			Contact
+	</div>
+
+	<a href="./images/resume.pdf">
+		<div class = "header_content" id = "resume_tag">
+			Resume
+		</div>
+	</a>
+
+	<div class = "header_content" id = "blog_tag">
+		Blog
+	</div>
+
+</div>
+
+<div class = "panel_introduction">
+
+	<div id = "introduction_image">
+	</div>
+	
+	<div class = "introduction">
+		<p>
+			Hi! I'm Nikhil Kaushik.
+		</p>
+	</div>
+
+	<div id = "introduction_bio">
+		<p>
+			Writer. Coder. Philosopher.
+		</p>
+	</div>
+
+	<div id = "icons-container">
+		{% if site.github_username %}
+		<a href = "https://www.github.com/{{ site.github_username }}">
+			<span class = "icons" id = "icon-github">
+				{% include icon-github.svg %}
+			</span>
+		</a>
+		{% endif %}
+	</div>
+
+</div>
+
+<div class = "panel_about">
+
+	<a name = "about_link"></a>
+
+	<div class = "content" id = "about_content">
+		<p>
+			CSE undergrad, IIT Roorkee.<br>Fiction afficianado.<br>Adele fan.<br>
+			Optimist.<br> Table-tennis enthusiast. <br>Poet at heart.
+			<br>Arsenal supporter. <br>Occasionally sarcastic.<br>Sometimes sentimental.<br>
+		</p>
+	</div>
+
+</div>
+
+<div class = "panel_interests">
+
+	<a name = "interests_link"></a>
+
+	<div class = "heading" id = "interests_heading">
+		<h1>
+			Interests
+		</h1>
+	</div>
+
+	<div class = "content" id = "interests_content">
+		<p>
+			My primary interests are software development, poetry and table-tennis.
+		</p>
+	</div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+</html>

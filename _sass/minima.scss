@@ -49,7 +49,6 @@ $on-laptop:        800px !default;
 ;
 */
 $header-height: 4em;
-//$content-bg: rgba(91, 91, 80, 0.5);
 $content-bg: rgba(0, 0, 0, 0.7);
 $content-color: white;
 
@@ -165,7 +164,7 @@ body {
 	left: 10%;
 	top: 40%;
 	display: none;
-	background-color: rgb(221, 86, 37);
+	//background-color: rgb(221, 86, 37);
 	font-family: 'Passion One', cursive;
 	font-size: 2em;
 }
