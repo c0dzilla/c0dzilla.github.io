@@ -218,7 +218,7 @@ body {
 svg {
 	width: 0;
 	animation: appear-full $type-time;
-	animation-delay: $type-time;
+	animation-delay: 3s;
 	animation-fill-mode: forwards;
 }
 

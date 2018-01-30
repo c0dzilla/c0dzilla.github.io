@@ -181,7 +181,7 @@ body {
 svg {
   width: 0;
   animation: appear-full 2s;
-  animation-delay: 2s;
+  animation-delay: 3s;
   animation-fill-mode: forwards; }
 
 .panel_about {
