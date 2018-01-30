@@ -58,23 +58,25 @@
 		</p>
 	</div>
 
-	<div id = "icons-container">
+	<div class = "icons-background">
 
-		{% if site.github_username %}
-		<a href = "https://www.github.com/{{ site.github_username }}">
-			<span class = "icons" id = "icon-github">
-				{% include icon-github.svg %}
-			</span>
-		</a>
-		{% endif %}
+		<div id = "icons-container" class = "icons-background">
+			{% if site.github_username %}
+			<a href = "https://www.github.com/{{ site.github_username }}">
+				<span class = "icons" id = "icon-github">
+					{% include icon-github.svg %}
+				</span>
+			</a>
+			{% endif %}
 
-		{% if site.linkedin_username %}
-		<a href = "https://www.linkedin.com/in/{{ site.linkedin_username }}">
-			<span class = "icons" id = "icon-github">
-				{% include icon-linkedin.svg %}
-			</span>
-		</a>
-		{% endif %}
+			{% if site.linkedin_username %}
+			<a href = "https://www.linkedin.com/in/{{ site.linkedin_username }}">
+				<span class = "icons" id = "icon-linkedin">
+					{% include icon-linkedin.svg %}
+				</span>
+			</a>
+			{% endif %}
+		</div>
 
 	</div>
 

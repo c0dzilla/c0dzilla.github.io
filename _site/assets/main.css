@@ -58,9 +58,17 @@ a {
   text-decoration: inherit;
   color: inherit; }
 
-@-webkit-keyframes type {
+@-webkit-keyframes appear {
   from {
     width: 0; } }
+@-webkit-keyframes appear-full {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+@-webkit-keyframes fadeIn {
+  to {
+    visibility: visible; } }
 body {
   margin: 0; }
 
@@ -125,7 +133,7 @@ body {
   color: yellow;
   overflow: hidden;
   white-space: nowrap;
-  animation: type 2s steps(40, end); }
+  animation: appear 2s steps(40, end); }
 
 #introduction-text {
   color: white; }
@@ -136,8 +144,6 @@ body {
   border-radius: 5px;
   text-align: center;
   box-shadow: 0 0 5px gray;
-  padding-right: 1em;
-  padding-left: 1em;
   padding: 1em 1em 1em 1em;
   font-family: "Barlow Semi Condensed", sans-serif; }
 
@@ -149,12 +155,30 @@ body {
   font-family: 'Passion One', cursive;
   font-size: 2em; }
 
-#icons-container {
+.icons-background {
   position: absolute;
   bottom: 20%;
-  display: flex;
-  justify-content: center;
   width: 100%; }
+
+#icons-container {
+  position: initial;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(224, 35, 192, 0.8);
+  margin: auto;
+  visibility: hidden;
+  animation: fadeIn 0s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; }
+
+svg {
+  width: 0;
+  animation: appear-full 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards; }
 
 .panel_about {
   position: absolute;

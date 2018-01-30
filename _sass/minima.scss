@@ -51,7 +51,8 @@ $on-laptop:        800px !default;
 $header-height: 4em;
 $content-bg: rgba(0, 0, 0, 0.7);
 $content-color: white;
-$content-font-family: 'Barlow Semi Condensed', sans-serif; 
+$content-font-family: 'Barlow Semi Condensed', sans-serif;
+$type-time: 2s;
 
 h1 {
 	margin: 0;
@@ -66,9 +67,27 @@ a {
 	color: inherit;
 }
 
-@-webkit-keyframes type {
+@-webkit-keyframes appear {
 	from {
 		width: 0;
+	}
+}
+
+@-webkit-keyframes appear-full {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+
+	}
+	to {
+		visibility: visible;
 	}
 }
 
@@ -89,7 +108,6 @@ body {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-    
     background-color: gray;
 }
 
@@ -146,7 +164,7 @@ body {
 	color: yellow;
 	overflow: hidden;
 	white-space: nowrap;
-	animation: type 2s steps(40, end);
+	animation: appear $type-time steps(40, end);
 }
 
 #introduction-text {
@@ -159,8 +177,6 @@ body {
 	border-radius: 5px;
 	text-align: center;
 	box-shadow: 0 0 5px gray;
-	padding-right: 1em;
-	padding-left: 1em;
 	padding: 1em 1em 1em 1em;
 	font-family: $content-font-family;
 }
@@ -175,12 +191,32 @@ body {
 	font-size: 2em;
 }
 
-#icons-container {
+.icons-background {
 	position: absolute;
 	bottom: 20%;
-	display: flex;
-	justify-content: center;
 	width: 100%;
+}
+
+#icons-container {
+	position: initial;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100px;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: rgba(224, 35, 192, 0.8);
+	margin: auto;
+	visibility: hidden;
+	animation: fadeIn 0s;
+	animation-delay: $type-time;
+	animation-fill-mode: forwards;
+}
+
+svg {
+	width: 0;
+	animation: appear-full $type-time;
+	animation-delay: $type-time;
+	animation-fill-mode: forwards;
 }
 
 .panel_about {
