@@ -93,18 +93,21 @@ body {
   height: 4em;
   background-color: rgba(255, 255, 255, 0.1);
   color: #efeee8;
-  z-index: 2; }
+  z-index: 2;
+  font-family: "Barlow Semi Condensed", sans-serif; }
 
 .header_content {
   width: 100px;
   line-height: 4em;
   text-align: center;
-  line-height: 4em; }
+  border-bottom: transparent;
+  line-height: 4em;
+  transition: border-bottom 0.5s ease-in-out; }
 
 .header_content:hover {
   color: yellow;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1); }
+  border-bottom: solid 2px; }
 
 #introduction_image {
   position: fixed;
@@ -157,7 +160,8 @@ body {
 
 .icons-background {
   position: absolute;
-  bottom: 20%;
+  top: 70%;
+  transform: translateY(-50%);
   width: 100%; }
 
 #icons-container {
@@ -167,7 +171,7 @@ body {
   width: 100px;
   padding: 5px;
   border-radius: 5px;
-  background-color: rgba(224, 35, 192, 0.8);
+  background-color: #dd5625;
   margin: auto;
   visibility: hidden;
   animation: fadeIn 0s;

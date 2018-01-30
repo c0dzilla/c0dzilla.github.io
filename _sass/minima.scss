@@ -120,19 +120,22 @@ body {
 	background-color: rgba(255, 255, 255, 0.1);
 	color: rgb(239, 238, 232);
 	z-index: 2;
+	font-family: $content-font-family;
 }
 
 .header_content {
 	width: 100px;
 	line-height: $header-height;
 	text-align: center;
+	border-bottom: transparent;
 	line-height: $header-height;
+	transition: border-bottom 0.5s ease-in-out;
 }
 
 .header_content:hover {
 	color: yellow;
 	cursor: pointer;
-	background-color: rgba(0, 0, 0, 0.1);
+	border-bottom: solid 2px;
 }
 
 #introduction_image {
@@ -186,14 +189,14 @@ body {
 	left: 10%;
 	top: 40%;
 	display: none;
-	//background-color: rgb(221, 86, 37);
 	font-family: 'Passion One', cursive;
 	font-size: 2em;
 }
 
 .icons-background {
 	position: absolute;
-	bottom: 20%;
+	top: 70%;
+	transform: translateY(-50%);
 	width: 100%;
 }
 
@@ -204,7 +207,7 @@ body {
 	width: 100px;
 	padding: 5px;
 	border-radius: 5px;
-	background-color: rgba(224, 35, 192, 0.8);
+	background-color: rgb(221, 86, 37);
 	margin: auto;
 	visibility: hidden;
 	animation: fadeIn 0s;
