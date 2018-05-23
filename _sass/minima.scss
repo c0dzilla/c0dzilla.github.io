@@ -100,8 +100,9 @@ body {
 
 .introduction {
 	position: absolute;
-	top: 15vh;
-	left: 10vw;
+	top: 10vh;
+	left: 50%;
+	transform: translateX(-50%);
 	font-family: 'Passion One', cursive;
 }
 
@@ -112,14 +113,18 @@ body {
 	overflow: hidden;
 	white-space: nowrap;
 	animation: appear $type-time steps(40, end);
+	position: relative;
+	text-align: center;
 }
 
 #introduction-bio {
+	position: relative;
 	opacity: 0;
 	animation: fadeIn 1s;
 	animation-delay: $type-time;
 	animation-fill-mode: forwards;
 	font-size: 2em;
+	text-align: center;
 }
 
 #introduction-text {
@@ -155,7 +160,7 @@ svg:hover {
 	transform: scale(1.1);
 }
 
-.panel_about {
+#panel_about {
 	position: absolute;
 	top: 100vh;
 	height: 100vh;
@@ -173,13 +178,12 @@ svg:hover {
 	font-size: 1.5em;
 }
 
-.panel_interests {
+#panel_interests {
 	position: absolute;
 	z-index: 1;
 	top: 200vh;
 	height: 100vh;
-	background-color: rgb(239, 238, 232);
-	background-color: rgba(221, 86, 37, 0.5);
+	opacity: 0;
 	width: 100%;
 }
 
