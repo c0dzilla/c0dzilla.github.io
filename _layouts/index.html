@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div class = "header">
+<div id = "header">
 	
 	<a href="#about_link">
 		<div class = "header_content" id = "about_tag">
@@ -43,43 +43,23 @@
 
 </div>
 
-<div class = "panel_introduction">
+<div id = "panel_introduction">
 
 	<div id = "introduction_image">
 	</div>
 	
 	<div class = "introduction">
-		<p>
-			Hi! <span id = "introduction-text">I'm Nikhil Kaushik.</span>
-		</p>
-	</div>
-
-	<div id = "introduction_bio">
-		<p>
-			Writer. Coder. Philosopher.
-		</p>
-	</div>
-
-	<div class = "icons-background">
-
-		<div id = "icons-container" class = "icons-background">
-			{% if site.github_username %}
-			<a href = "https://www.github.com/{{ site.github_username }}">
-				<span class = "icons" id = "icon-github">
-					{% include icon-github.svg %}
-				</span>
-			</a>
-			{% endif %}
-
-			{% if site.linkedin_username %}
-			<a href = "https://www.linkedin.com/in/{{ site.linkedin_username }}">
-				<span class = "icons" id = "icon-linkedin">
-					{% include icon-linkedin.svg %}
-				</span>
-			</a>
-			{% endif %}
+		<div id = "introduction-title">
+			<p>
+				Hi! <span id = "introduction-text">I'm Nikhil Kaushik.</span>
+			</p>
 		</div>
 
+		<div id = "introduction-bio">
+			<p>
+				Writer. Coder. Philosopher.
+			</p>
+		</div>
 	</div>
 
 </div>
@@ -114,6 +94,28 @@
 		</p>
 	</div>
 
+</div>
+
+<div id = "footer">
+	{% if site.github_username %}
+	<div class = "icon-container">
+		<a href = "https://www.github.com/{{ site.github_username }}">
+			<span class = "icons" id = "icon-github">
+				{% include icon-github.svg %}
+			</span>
+		</a>
+		{% endif %}
+	</div>
+
+	{% if site.linkedin_username %}
+	<div class = "icon-container">
+		<a href = "https://www.linkedin.com/in/{{ site.linkedin_username }}">
+			<span class = "icons" id = "icon-linkedin">
+				{% include icon-linkedin.svg %}
+			</span>
+		</a>
+		{% endif %}
+	</div>
 </div>
 
 </body>

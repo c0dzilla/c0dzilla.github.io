@@ -1,53 +1,3 @@
-/*@charset "utf-8";
-
-// Define defaults for each variable.
-
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-$spacing-unit:     30px !default;
-
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
-
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
-
-// Width of the content area
-$content-width:    800px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
-
-// Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
-;
-*/
 h1 {
   margin: 0; }
 
@@ -61,14 +11,11 @@ a {
 @-webkit-keyframes appear {
   from {
     width: 0; } }
-@-webkit-keyframes appear-full {
-  from {
-    width: 0; }
-  to {
-    width: 100%; } }
 @-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
   to {
-    visibility: visible; } }
+    opacity: 1; } }
 body {
   margin: 0; }
 
@@ -85,7 +32,7 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   background-color: gray; }
 
-.header {
+#header {
   position: fixed;
   width: 100%;
   display: flex;
@@ -119,7 +66,7 @@ body {
   background-size: 100% 100%;
   z-index: -1; }
 
-.panel_introduction {
+#panel_introduction {
   position: absolute;
   top: 0;
   height: 100vh;
@@ -128,9 +75,11 @@ body {
 
 .introduction {
   position: absolute;
-  top: 25%;
-  left: 10%;
-  font-family: 'Passion One', cursive;
+  top: 15vh;
+  left: 10vw;
+  font-family: 'Passion One', cursive; }
+
+#introduction-title {
   font-size: 5em;
   width: 9em;
   color: yellow;
@@ -138,8 +87,18 @@ body {
   white-space: nowrap;
   animation: appear 2s steps(40, end); }
 
+#introduction-bio {
+  opacity: 0;
+  animation: fadeIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  font-size: 2em; }
+
 #introduction-text {
-  color: white; }
+  color: whitesmoke; }
+
+.icon-container {
+  padding: 5px; }
 
 .content {
   background-color: rgba(0, 0, 0, 0.7);
@@ -150,39 +109,18 @@ body {
   padding: 1em 1em 1em 1em;
   font-family: "Barlow Semi Condensed", sans-serif; }
 
-#introduction_bio {
-  position: absolute;
-  left: 10%;
-  top: 40%;
-  display: none;
-  font-family: 'Passion One', cursive;
-  font-size: 2em; }
-
-.icons-background {
-  position: absolute;
-  top: 70%;
-  transform: translateY(-50%);
-  width: 100%; }
-
-#icons-container {
-  position: initial;
+#footer {
+  z-index: 2;
+  position: fixed;
+  padding: 3px;
+  bottom: 0;
   display: flex;
-  justify-content: space-evenly;
-  width: 100px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #dd5625;
-  margin: auto;
-  visibility: hidden;
-  animation: fadeIn 0s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards; }
+  justify-content: center;
+  width: 100%;
+  background-color: #ddeba9; }
 
-svg {
-  width: 0;
-  animation: appear-full 2s;
-  animation-delay: 3s;
-  animation-fill-mode: forwards; }
+svg:hover {
+  transform: scale(1.1); }
 
 .panel_about {
   position: absolute;

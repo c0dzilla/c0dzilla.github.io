@@ -5,13 +5,10 @@ body {
 
 a {
 	text-decoration: none;
-  color: inherit;
+	color: black;
 }
 
-.post {
-  color: red;
-}
+.post-intro-div {
+	
 
-#post-intro-div {
-  padding: 1em;
 }
