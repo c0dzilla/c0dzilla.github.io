@@ -3,6 +3,9 @@ $content-bg: rgba(0, 0, 0, 0.7);
 $content-color: white;
 $content-font-family: 'Barlow Semi Condensed', sans-serif;
 $type-time: 2s;
+$col1: #EF5455;
+$col2: #2B3252;
+$col3: #FAD744;
 
 h1 {
 	margin: 0;
@@ -56,7 +59,7 @@ body {
 	position: fixed;
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	height: $header-height;
 	background-color: rgba(255, 255, 255, 0.1);
 	color: rgb(239, 238, 232);
@@ -79,14 +82,31 @@ body {
 	border-bottom: solid 2px;
 }
 
-#background_image {
-	position: fixed;
+#background_image_1 {
 	top: 0;
 	height: 100vh;
 	width: 100%;
-	background-color: gray;
-	background-image: url("../images/introduction_image.png");
+	background-color: $col2;
+	//background-image: url("../images/introduction_image.png");
 	background-size: 100% 100%;
+	z-index: 0;
+}
+
+#background_image_2 {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: $col1;
+	z-index: -1;
+}
+
+#background_image_3 {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: $col3;
 	z-index: -1;
 }
 
@@ -98,12 +118,11 @@ body {
 	z-index: 1;
 }
 
-.introduction {
+#introduction-container {
 	position: absolute;
 	top: 10vh;
 	left: 50%;
 	transform: translateX(-50%);
-	font-family: 'Passion One', cursive;
 }
 
 #introduction_image {
@@ -121,12 +140,13 @@ body {
 #introduction-title {
 	font-size: 5em;
 	width: 9em;
-	color: yellow;
+	color: $col3;
 	overflow: hidden;
 	white-space: nowrap;
 	animation: appear $type-time steps(40, end);
 	position: relative;
 	text-align: center;
+	font-family: 'Passion One', cursive;
 }
 
 #introduction-bio {
@@ -137,10 +157,13 @@ body {
 	animation-fill-mode: forwards;
 	font-size: 2em;
 	text-align: center;
+	color: #f0e9e9;
+	font-family: 'Passion One', cursive;
 }
 
 #introduction-text {
-	color:whitesmoke;
+	color: $col1;
+	font-family: 'Passion One', cursive;
 }
 
 .icon-container {
@@ -157,7 +180,7 @@ body {
 	font-family: $content-font-family;
 }
 
-#footer {
+#profiles {
 	z-index: 2;
 	position: fixed;
 	padding: 3px;
@@ -174,20 +197,25 @@ svg:hover {
 
 #panel_about {
 	position: absolute;
-	top: 100vh;
+	top: 0;
 	height: 100vh;
 	width: 100%;
+	z-index: -1;
 }
 
 #about_content {
 	z-index: 1;
 	position: absolute;
-	top: 30%;
-	width: 40%;
-	left: 30%;
-	background-color: $content-bg;
-	color: white;
+	bottom: $header-height;
+	background-color: $col3;
+	color: $col2;
 	font-size: 1.5em;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	animation: fadeIn 1s;
+	animation-delay: $type-time + 0.5s;
+	animation-fill-mode: forwards;
 }
 
 #panel_interests {
@@ -195,8 +223,8 @@ svg:hover {
 	z-index: 1;
 	top: 200vh;
 	height: 100vh;
-	opacity: 0;
 	width: 100%;
+	z-index: -1;
 }
 
 .heading {

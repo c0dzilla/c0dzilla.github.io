@@ -13,7 +13,7 @@
 
 <div id = "header">
 	
-	<a href="#about_link">
+	<!--<a href="#about_link">-->
 		<div class = "header_content" id = "about_tag">
 			About		
 		</div>
@@ -35,7 +35,7 @@
 		</div>
 	</a>
 
-	<a href = "./blog">
+	<a href = "https://www.intendedpoetry.wordpress.com">
 		<div class = "header_content" id = "blog_tag">
 			Blog
 		</div>
@@ -43,11 +43,11 @@
 
 </div>
 
-<div id = "background_image"></div>
+<div id = "background_image_1"></div>
 
 <div id = "panel_introduction">
-	<div class = "introduction">
-		<div id = "introduction_image" class = "introduction"></div>
+	<div id = "introduction-container">
+		<!--<div id = "introduction_image" class = "introduction"></div> -->
 		<div id = "introduction-title" class="introduction">
 			<p>
 				Hi! <span id = "introduction-text">I'm Nikhil Kaushik.</span>
@@ -61,21 +61,29 @@
 		</div>
 	</div>
 
-</div>
+	<div id = "panel_about">
 
-<div id = "panel_about">
-
-	<a name = "about_link"></a>
-
-	<div class = "content" id = "about_content">
-		<p>
-			CSE undergrad, IIT Roorkee.<br>Fiction afficianado.<br>Adele fan.<br>
-			Optimist.<br> Table-tennis enthusiast. <br>Poet at heart.
-			<br>Arsenal supporter. <br>Occasionally sarcastic.<br>Sometimes sentimental.<br>
-		</p>
+		<a name = "about_link"></a>
+	
+		<div class = "content" id = "about_content">
+			<p>
+				CSE undergrad, IIT Roorkee.
+				<br>Program computers.
+				<br>Fond of learning.
+				<br>Creative writer.
+				<br>Like to read.
+				<br>Optimist.<br> Poetic soul.<br>Arsenal supporter.
+				<br>Occasionally sarcastic.<br>Sometimes sentimental.
+			</p>
+		</div>
+	
 	</div>
 
 </div>
+
+<div id = "background_image_2"></div>
+
+<div id = "background_image_3"></div>
 
 <div id = "panel_interests">
 
@@ -95,7 +103,7 @@
 
 </div>
 
-<div id = "footer">
+<div id = "profiles">
 	
 	<div class = "icon-container">
 		<a href = "https://www.github.com/c0dzilla">
@@ -121,4 +129,21 @@
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="./assets/main.js"></script>
+<script>
+	window.onload = function() {
+		document.getElementById('about_tag').addEventListener('click', function() {
+			document.getElementById('background_image_1').style.zIndex = document.getElementById('background_image_3').style.zIndex = -1;
+			document.getElementById('background_image_2').style.zIndex = 0;
+			document.getElementById('panel_introduction').style.zIndex = document.getElementById('panel_interests').style.zIndex = -1;
+			document.getElementById('panel_about').style.zIndex = 0;
+		});
+
+		document.getElementById('interests_tag').addEventListener('click', function() {
+			document.getElementById('background_image_1').style.zIndex = document.getElementById('background_image_2').style.zIndex = -1;
+			document.getElementById('background_image_3').style.zIndex = 0;
+			document.getElementById('panel_introduction').style.zIndex = document.getElementById('panel_about').style.zIndex = -1;
+			document.getElementById('panel_interests').style.zIndex = 0;
+		});
+	}
+</script>
 </html>

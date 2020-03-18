@@ -36,7 +36,7 @@ body {
   position: fixed;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   height: 4em;
   background-color: rgba(255, 255, 255, 0.1);
   color: #efeee8;
@@ -56,14 +56,28 @@ body {
   cursor: pointer;
   border-bottom: solid 2px; }
 
-#background_image {
-  position: fixed;
+#background_image_1 {
   top: 0;
   height: 100vh;
   width: 100%;
-  background-color: gray;
-  background-image: url("../images/introduction_image.png");
+  background-color: #2B3252;
   background-size: 100% 100%;
+  z-index: 0; }
+
+#background_image_2 {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #EF5455;
+  z-index: -1; }
+
+#background_image_3 {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #FAD744;
   z-index: -1; }
 
 #panel_introduction {
@@ -73,12 +87,11 @@ body {
   width: 100%;
   z-index: 1; }
 
-.introduction {
+#introduction-container {
   position: absolute;
   top: 10vh;
   left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Passion One', cursive; }
+  transform: translateX(-50%); }
 
 #introduction_image {
   position: relative;
@@ -94,12 +107,13 @@ body {
 #introduction-title {
   font-size: 5em;
   width: 9em;
-  color: yellow;
+  color: #FAD744;
   overflow: hidden;
   white-space: nowrap;
   animation: appear 2s steps(40, end);
   position: relative;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Passion One', cursive; }
 
 #introduction-bio {
   position: relative;
@@ -108,10 +122,13 @@ body {
   animation-delay: 2s;
   animation-fill-mode: forwards;
   font-size: 2em;
-  text-align: center; }
+  text-align: center;
+  color: #f0e9e9;
+  font-family: 'Passion One', cursive; }
 
 #introduction-text {
-  color: whitesmoke; }
+  color: #EF5455;
+  font-family: 'Passion One', cursive; }
 
 .icon-container {
   padding: 5px; }
@@ -125,7 +142,7 @@ body {
   padding: 1em 1em 1em 1em;
   font-family: "Barlow Semi Condensed", sans-serif; }
 
-#footer {
+#profiles {
   z-index: 2;
   position: fixed;
   padding: 3px;
@@ -140,27 +157,32 @@ svg:hover {
 
 #panel_about {
   position: absolute;
-  top: 100vh;
+  top: 0;
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 #about_content {
   z-index: 1;
   position: absolute;
-  top: 30%;
-  width: 40%;
-  left: 30%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 1.5em; }
+  bottom: 4em;
+  background-color: #FAD744;
+  color: #2B3252;
+  font-size: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeIn 1s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards; }
 
 #panel_interests {
   position: absolute;
   z-index: 1;
   top: 200vh;
   height: 100vh;
-  opacity: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 .heading {
   text-align: center;
