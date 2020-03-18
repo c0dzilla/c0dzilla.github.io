@@ -19,7 +19,7 @@
 		</div>
 	</a>
 
-	<a href="#interests_link">
+	<!--<a href="#interests_link">-->
 		<div class = "header_content" id = "interests_tag">
 			Interests
 		</div>
@@ -58,25 +58,45 @@
 			<p>
 				Writer. Coder. Philosopher.
 			</p>
-		</div>
-	</div>
 
-	<div id = "panel_about">
+			<div id = "panel_about">
 
-		<a name = "about_link"></a>
-	
-		<div class = "content" id = "about_content">
-			<p>
-				CSE undergrad, IIT Roorkee.
-				<br>Program computers.
-				<br>Fond of learning.
-				<br>Creative writer.
-				<br>Like to read.
-				<br>Optimist.<br> Poetic soul.<br>Arsenal supporter.
-				<br>Occasionally sarcastic.<br>Sometimes sentimental.
-			</p>
+				<a name = "about_link"></a>
+			
+				<div class = "content" id = "about_content">
+					<p>
+						CSE undergrad, IIT Roorkee.
+						<br>Program computers.
+						<br>Fond of learning.
+						<br>Creative writer.
+						<br>Like to read.
+						<br>Optimist.<br> Poetic soul.<br>Arsenal supporter.
+						<br>Occasionally sarcastic.<br>Sometimes sentimental.
+					</p>
+				</div>
+			
+			</div>
+
+
+
+			<div id = "panel_interests">
+
+				<a name = "interests_link"></a>
+			
+				<!--<div class = "heading" id = "interests_heading">
+					<h1>
+						Interests
+					</h1>
+				</div>-->
+			
+				<div class = "content" id = "interests_content">
+					<p>
+						My primary interests are software development, poetry and table-tennis.
+					</p>
+				</div>
+			
+			</div>
 		</div>
-	
 	</div>
 
 </div>
@@ -84,24 +104,6 @@
 <div id = "background_image_2"></div>
 
 <div id = "background_image_3"></div>
-
-<div id = "panel_interests">
-
-	<a name = "interests_link"></a>
-
-	<div class = "heading" id = "interests_heading">
-		<h1>
-			Interests
-		</h1>
-	</div>
-
-	<div class = "content" id = "interests_content">
-		<p>
-			My primary interests are software development, poetry and table-tennis.
-		</p>
-	</div>
-
-</div>
 
 <div id = "profiles">
 	
@@ -132,17 +134,23 @@
 <script>
 	window.onload = function() {
 		document.getElementById('about_tag').addEventListener('click', function() {
-			document.getElementById('background_image_1').style.zIndex = document.getElementById('background_image_3').style.zIndex = -1;
-			document.getElementById('background_image_2').style.zIndex = 0;
-			document.getElementById('panel_introduction').style.zIndex = document.getElementById('panel_interests').style.zIndex = -1;
-			document.getElementById('panel_about').style.zIndex = 0;
+			document.getElementById('background_image_2').style.zIndex = document.getElementById('background_image_3').style.zIndex = -1;
+			document.getElementById('background_image_1').style.zIndex = 0;
+			document.getElementById('panel_interests').style.opacity = 0;
+			document.getElementById('panel_about').style.opacity = 1;
+			document.getElementById('about_tag').style.color = "#FAD744";
+			document.getElementById('about_tag').style.borderBottom = "solid 2px";
+			document.getElementById('interests_tag').style.color = "rgb(239, 238, 232)";
+			document.getElementById('interests_tag').style.borderBottom = "none";
 		});
 
 		document.getElementById('interests_tag').addEventListener('click', function() {
-			document.getElementById('background_image_1').style.zIndex = document.getElementById('background_image_2').style.zIndex = -1;
-			document.getElementById('background_image_3').style.zIndex = 0;
-			document.getElementById('panel_introduction').style.zIndex = document.getElementById('panel_about').style.zIndex = -1;
-			document.getElementById('panel_interests').style.zIndex = 0;
+			document.getElementById('panel_interests').style.opacity = 1;
+			document.getElementById('panel_about').style.opacity = 0;
+			document.getElementById('interests_tag').style.color = "#FAD744";
+			document.getElementById('interests_tag').style.borderBottom = "solid 2px";
+			document.getElementById('about_tag').style.color = "rgb(239, 238, 232)";
+			document.getElementById('about_tag').style.borderBottom = "none";
 		});
 	}
 </script>

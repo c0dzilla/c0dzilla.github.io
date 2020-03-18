@@ -5,7 +5,7 @@ $content-font-family: 'Barlow Semi Condensed', sans-serif;
 $type-time: 2s;
 $col1: #EF5455;
 $col2: #2B3252;
-$col3: #FAD744;
+$col3: #fad744;
 
 h1 {
 	margin: 0;
@@ -61,10 +61,14 @@ body {
 	display: flex;
 	justify-content: center;
 	height: $header-height;
-	background-color: rgba(255, 255, 255, 0.1);
+	//background-color: rgba(255, 255, 255, 0.1);
 	color: rgb(239, 238, 232);
 	z-index: 2;
-    font-family: $content-font-family;
+	font-family: $content-font-family;
+	animation: fadeIn 1s;
+	opacity: 0;
+	animation-delay: $type-time + 1s;
+	animation-fill-mode: forwards;
 }
 
 .header_content {
@@ -77,9 +81,18 @@ body {
 }
 
 .header_content:hover {
-	color: yellow;
+	color: $col3;
 	cursor: pointer;
-	border-bottom: solid 2px;
+	border-bottom: solid 2px $col3;
+}
+
+#about_tag {
+	color: $col3;
+	border-bottom: solid 2px $col3;
+}
+
+#about_tag, #interests_tag, #contact_tag, #resume_tag {
+	margin-right: 1rem;
 }
 
 #background_image_1 {
@@ -120,7 +133,7 @@ body {
 
 #introduction-container {
 	position: absolute;
-	top: 10vh;
+	top: 1.25*$header-height;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -162,6 +175,7 @@ body {
 }
 
 #introduction-text {
+	position: relative;
 	color: $col1;
 	font-family: 'Passion One', cursive;
 }
@@ -195,36 +209,29 @@ svg:hover {
 	transform: scale(1.1);
 }
 
-#panel_about {
+#panel_about, #panel_interests {
 	position: absolute;
-	top: 0;
-	height: 100vh;
-	width: 100%;
-	z-index: -1;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 1rem;
 }
 
-#about_content {
+#panel_interests {
+	opacity: 0;
+}
+
+#about_content, #interests_content{
 	z-index: 1;
-	position: absolute;
-	bottom: $header-height;
+	position: relative;
 	background-color: $col3;
 	color: $col2;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
 	animation: fadeIn 1s;
 	animation-delay: $type-time + 0.5s;
 	animation-fill-mode: forwards;
-}
-
-#panel_interests {
-	position: absolute;
-	z-index: 1;
-	top: 200vh;
-	height: 100vh;
-	width: 100%;
-	z-index: -1;
 }
 
 .heading {
@@ -236,10 +243,11 @@ svg:hover {
 #interests_heading {
 	background-color: rgba(221, 86, 37, 1);
 }
-
+/*
 #interests_content {
 	position: absolute;
 	top: 20%;
 	width: 50%;
 	left: 25%;
 }
+*/
