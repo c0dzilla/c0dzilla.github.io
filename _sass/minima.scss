@@ -35,6 +35,12 @@ a {
 	}
 }
 
+@-webkit-keyframes riseUp {
+	from {
+        height: 0;
+	}
+}
+
 body {
 	margin: 0;
 }
@@ -81,9 +87,9 @@ body {
 }
 
 .header_content:hover {
-	color: $col3;
+	color: $col3 !important;
 	cursor: pointer;
-	border-bottom: solid 2px $col3;
+	border-bottom: solid 2px $col3 !important;
 }
 
 #about_tag {
@@ -188,10 +194,10 @@ body {
 	background-color: $content-bg;
 	color: $content-color;
 	border-radius: 5px;
-	text-align: center;
 	box-shadow: 0 0 5px gray;
 	padding: 1em 1em 1em 1em;
 	font-family: $content-font-family;
+	text-align: left;
 }
 
 #profiles {
@@ -242,6 +248,18 @@ svg:hover {
 
 #interests_heading {
 	background-color: rgba(221, 86, 37, 1);
+}
+
+.text_left {
+	text-align: left !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+ul {
+	margin: 0;
 }
 /*
 #interests_content {

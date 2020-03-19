@@ -16,6 +16,9 @@ a {
     opacity: 0; }
   to {
     opacity: 1; } }
+@-webkit-keyframes riseUp {
+  from {
+    height: 0; } }
 body {
   margin: 0; }
 
@@ -55,9 +58,9 @@ body {
   transition: border-bottom 0.5s ease-in-out; }
 
 .header_content:hover {
-  color: #fad744;
+  color: #fad744 !important;
   cursor: pointer;
-  border-bottom: solid 2px #fad744; }
+  border-bottom: solid 2px #fad744 !important; }
 
 #about_tag {
   color: #fad744;
@@ -148,10 +151,10 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   border-radius: 5px;
-  text-align: center;
   box-shadow: 0 0 5px gray;
   padding: 1em 1em 1em 1em;
-  font-family: "Barlow Semi Condensed", sans-serif; }
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-align: left; }
 
 #profiles {
   z-index: 2;
@@ -195,6 +198,15 @@ svg:hover {
 
 #interests_heading {
   background-color: #dd5625; }
+
+.text_left {
+  text-align: left !important; }
+
+.text-center {
+  text-align: center !important; }
+
+ul {
+  margin: 0; }
 
 /*
 #interests_content {
