@@ -150,6 +150,16 @@
 		</a>
 		{% endif %}
 	</div>
+
+	{% if site.twitter_username %}
+	<div class = "icon-container">
+		<a href = "https://www.twitter.com/{{ site.twitter_username }}">
+			<span class = "icons" id = "icon-twitter">
+				{% include icon-twitter.svg %}
+			</span>
+		</a>
+		{% endif %}
+	</div>
 </div>
 
 </body>
