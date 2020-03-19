@@ -16,9 +16,6 @@ a {
     opacity: 0; }
   to {
     opacity: 1; } }
-@-webkit-keyframes riseUp {
-  from {
-    height: 0; } }
 body {
   margin: 0; }
 
@@ -164,21 +161,25 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #ddeba9; }
+  background-color: #ddeba9;
+  animation: fadeIn 1s;
+  animation-delay: 3.5s;
+  opacity: 0;
+  animation-fill-mode: forwards; }
 
 svg:hover {
   transform: scale(1.1); }
 
-#panel_about, #panel_interests {
+#panel_about, #panel_interests, #panel_contact {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 1rem; }
 
-#panel_interests {
+#panel_interests, #panel_contact {
   opacity: 0; }
 
-#about_content, #interests_content {
+#about_content, #interests_content, #contact_content {
   z-index: 1;
   position: relative;
   background-color: #fad744;

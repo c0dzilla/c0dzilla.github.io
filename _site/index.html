@@ -83,12 +83,6 @@
 
 				<a name = "interests_link"></a>
 			
-				<!--<div class = "heading" id = "interests_heading">
-					<h1>
-						Interests
-					</h1>
-				</div>-->
-			
 				<div class = "content" id = "interests_content">
 					<p>
 						<p align="center" margin><b><u>Interests</u></b></p>
@@ -105,6 +99,24 @@
 						<li>Reading novels.</li>
 						<li>Creative writing.</li></ul>
 					</p>
+				</div>
+			
+			</div>
+
+
+
+			<div id = "panel_contact">
+				<a name = "contact_link"></a>
+				<div class = "content" id = "contact_content">
+					<form action="https://getform.io/f/24312eac-c28e-4052-ad92-b71e3820e781" method="POST">
+						<label for="name">Name:</label><br>
+						<input type="text" size="25" name="name"><br>
+						<label for="email">Email:</label><br>
+						<input type="email" name="email" size="25"><br>
+						<label for="message">Message:</label><br>
+						<textarea name="message" rows="6" cols="30"></textarea><br>
+						<button type="submit" style="position: relative; left: 50%; transform: translateX(-50%);">Send</button>
+					  </form>
 				</div>
 			
 			</div>
@@ -146,23 +158,30 @@
 <script>
 	window.onload = function() {
 		document.getElementById('about_tag').addEventListener('click', function() {
-			document.getElementById('background_image_2').style.zIndex = document.getElementById('background_image_3').style.zIndex = -1;
-			document.getElementById('background_image_1').style.zIndex = 0;
-			document.getElementById('panel_interests').style.opacity = 0;
+			document.getElementById('panel_interests').style.opacity = document.getElementById('panel_contact').style.opacity = 0;
 			document.getElementById('panel_about').style.opacity = 1;
 			document.getElementById('about_tag').style.color = "#FAD744";
 			document.getElementById('about_tag').style.borderBottom = "solid 2px";
-			document.getElementById('interests_tag').style.color = "rgb(239, 238, 232)";
-			document.getElementById('interests_tag').style.borderBottom = "none";
+			document.getElementById('interests_tag').style.color = document.getElementById('contact_tag').style.color = "rgb(239, 238, 232)";
+			document.getElementById('interests_tag').style.borderBottom = document.getElementById('contact_tag').style.borderBottom = "none";
 		});
 
 		document.getElementById('interests_tag').addEventListener('click', function() {
 			document.getElementById('panel_interests').style.opacity = 1;
-			document.getElementById('panel_about').style.opacity = 0;
+			document.getElementById('panel_about').style.opacity = document.getElementById('panel_contact').style.opacity = 0;
 			document.getElementById('interests_tag').style.color = "#FAD744";
 			document.getElementById('interests_tag').style.borderBottom = "solid 2px";
-			document.getElementById('about_tag').style.color = "rgb(239, 238, 232)";
-			document.getElementById('about_tag').style.borderBottom = "none";
+			document.getElementById('about_tag').style.color = document.getElementById('contact_tag').style.color = "rgb(239, 238, 232)";
+			document.getElementById('about_tag').style.borderBottom = document.getElementById('contact_tag').style.borderBottom = "none";
+		});
+
+		document.getElementById('contact_tag').addEventListener('click', function() {
+			document.getElementById('panel_interests').style.opacity = document.getElementById('panel_about').style.opacity = 0;
+			document.getElementById('panel_contact').style.opacity = 1;
+			document.getElementById('contact_tag').style.color = "#FAD744";
+			document.getElementById('contact_tag').style.borderBottom = "solid 2px";
+			document.getElementById('about_tag').style.color = document.getElementById('interests_tag').style.color = "rgb(239, 238, 232)";
+			document.getElementById('about_tag').style.borderBottom = document.getElementById('interests_tag').style.borderBottom = "none";
 		});
 	}
 </script>
