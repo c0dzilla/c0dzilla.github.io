@@ -1,4 +1,4 @@
-$header-height: 4em;
+$header-height: 4rem;
 $content-bg: rgba(0, 0, 0, 0.7);
 $content-color: white;
 $content-font-family: 'Barlow Semi Condensed', sans-serif;
@@ -151,8 +151,8 @@ body {
 }
 
 #introduction-title {
-	font-size: 5em;
-	width: 9em;
+	font-size: 5rem;
+	width: 45rem;
 	color: $col3;
 	overflow: hidden;
 	white-space: nowrap;
@@ -168,7 +168,7 @@ body {
 	animation: fadeIn 1s;
 	animation-delay: $type-time;
 	animation-fill-mode: forwards;
-	font-size: 2em;
+	font-size: 2rem;
 	text-align: center;
 	color: #f0e9e9;
 	font-family: 'Passion One', cursive;
@@ -189,7 +189,7 @@ body {
 	color: $content-color;
 	border-radius: 5px;
 	box-shadow: 0 0 5px gray;
-	padding: 1em 1em 1em 1em;
+	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 	font-family: $content-font-family;
 	text-align: left;
 }
@@ -241,7 +241,7 @@ svg:hover {
 .heading {
 	text-align: center;
 	font-family: 'Spectral SC', serif;
-	padding: 1em;
+	padding: 1rem;
 }
 
 #interests_heading {
