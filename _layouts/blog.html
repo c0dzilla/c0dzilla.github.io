@@ -3,17 +3,23 @@
 	<title>
 		Nikhil Kaushik
 	</title>
+	<link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../assets/blog.css">
 </head>
 <body>
 	<div id = "container">
 	  {% for post in site.posts %}
-	    <div id = "post-intro-div" class = "post">
-	    	<div id = "post-title-div" class = "post">
-	      		<a href="{{ post.url }}">{{ post.title }}</a>
-	      	</div>
-	      	<div id = "post-summary-div" class = "post">
-	      		{{ post.summary }}
+	    <div id = "post-intro-div">
+	    	<div id = "post-title-div" class = "title">
+	      		<a href="{{ post.url }}"><span class="highlight-1">{{ post.title }}</span></a>
+			  </div>
+			  <div id="date-div" class="">{{ post.date }}</div>
+	      	<div id = "post-summary-div" class = "text">
+	      		<span>
+					{{ post.summary }}
+				</span>
 	      	</div>
 	    </div>
 	  {% endfor %}

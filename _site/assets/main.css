@@ -37,7 +37,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 4em;
+  height: 4rem;
   color: #efeee8;
   z-index: 2;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -48,10 +48,10 @@ body {
 
 .header_content {
   width: 100px;
-  line-height: 4em;
+  line-height: 4rem;
   text-align: center;
   border-bottom: transparent;
-  line-height: 4em;
+  line-height: 4rem;
   transition: border-bottom 0.5s ease-in-out; }
 
 .header_content:hover {
@@ -99,7 +99,7 @@ body {
 
 #introduction-container {
   position: absolute;
-  top: 5em;
+  top: 5rem;
   left: 50%;
   transform: translateX(-50%); }
 
@@ -115,8 +115,8 @@ body {
   animation-fill-mode: forwards; }
 
 #introduction-title {
-  font-size: 5em;
-  width: 9em;
+  font-size: 5rem;
+  width: 45rem;
   color: #fad744;
   overflow: hidden;
   white-space: nowrap;
@@ -131,7 +131,7 @@ body {
   animation: fadeIn 1s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
-  font-size: 2em;
+  font-size: 2rem;
   text-align: center;
   color: #f0e9e9;
   font-family: 'Passion One', cursive; }
@@ -149,7 +149,7 @@ body {
   color: white;
   border-radius: 5px;
   box-shadow: 0 0 5px gray;
-  padding: 1em 1em 1em 1em;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
   font-family: "Barlow Semi Condensed", sans-serif;
   text-align: left; }
 
@@ -195,7 +195,7 @@ svg:hover {
 .heading {
   text-align: center;
   font-family: 'Spectral SC', serif;
-  padding: 1em; }
+  padding: 1rem; }
 
 #interests_heading {
   background-color: #dd5625; }
