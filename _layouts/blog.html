@@ -15,15 +15,15 @@
 	    	<div id = "post-title-div" class = "title">
 	      		<a href="{{ post.url }}"><span class="highlight-1">{{ post.title }}</span></a>
 			  </div>
-			  <div id="date-div" class="">
+			  <p class="padded-left" style="padding-left: 2rem;">
 					<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 						{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 						{{ post.date | date: date_format }}
 					</time>
 					{% if post.author %}
 						• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>
-					{% endif %}</p>
-				</div>
+					{% endif %}
+				</p>
 	      	<div id = "post-summary-div" class = "text">
 	      		<span>
 					{{ post.summary }}
